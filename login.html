@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+function validateForm() {
+  let x = document.forms["myForm"]["username"].value;
+  if (x == "") {
+    alert("username field must be filled out");
+    return false;
+  }
+ let y = document.forms["myForm"]["password"].value;
+  if (y == "") {
+    alert("password field must be filled out");
+    return false;
+  }
+
+}
+</script>
+
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the TECH 136 blog by LAM</h1>
+<form name="myForm" action = "login_action" method = "post" onsubmit="return validateForm()">>
+Account:
+<input type = "text" name = "username" value = "" /> 
+<br>
+Password:
+<input type = "password" name = "password" value = "" /> 
+<br>
+<input type = "submit" value = "Submit" />
+</form>
+    <h1>
+    <a href='http://34.238.170.158:5005/signup'>Sign up</a><br>
+    </h1>
+</body>
